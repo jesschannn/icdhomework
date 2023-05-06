@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=["GET"])
 def home():
-    return 'this is a API service for MN ICD code details'
+    return 'this is a API service for MN Service code details'
 
 @app.route('/preview', methods=["GET"])
 def preview():
