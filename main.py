@@ -24,7 +24,7 @@ def svccode(value):
     else: 
         return filtered.to_json(orient="records")
 
-@app.route('/svc_code/<value>/county_name<value2>')
+@app.route('/svc_code/<value>/county_name/<value2>')
 def svccode2(value, value2):
     filtered = df[df['svc_code'] == value]
     filtered2 = filtered[filtered['county_name'] == value2]
