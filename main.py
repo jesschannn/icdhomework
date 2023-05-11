@@ -24,10 +24,10 @@ def svccode(value):
     else: 
         return filtered.to_json(orient="records")
 
-@app.route('/svc_code/<value>/payer/<value2>')
+@app.route('/svc_code/<value>/age_group_code/<value2>')
 def svccode2(value, value2):
     filtered = df[df['svc_code'] == value]
-    filtered2 = filtered[filtered['payer'] == value2]
+    filtered2 = filtered[filtered['age_group_code'] == value2]
     if len(filtered2) <= 0:
         return 'There is nothing here'
     else: 
